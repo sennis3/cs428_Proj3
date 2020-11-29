@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class JeffScript : MonoBehaviour
 {
-    //public AudioSource audioSrc;
+    public AudioSource audiosrc;
     public Animator anima;
     // Start is called before the first frame update
     void Start()
     {
-        //audiosrc.GetComponent<AudioSource>();
+        audiosrc.GetComponent<AudioSource>();
 
     }
 
@@ -22,7 +22,7 @@ public class JeffScript : MonoBehaviour
     void OnTriggerEnter(Collider colObj) {
         if (colObj.gameObject.name == "CameraTrigger") {
             anima.SetTrigger("JeffTrigger");
-            //audiosrc.Play();
+            audiosrc.Play();
         }
     }
 }
